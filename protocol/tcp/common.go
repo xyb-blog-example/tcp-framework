@@ -3,7 +3,6 @@ package tcp
 import (
 	"net"
 	"sync"
-	"git-pd.megvii-inc.com/slg-service/dgw/components"
 	"io"
 )
 
