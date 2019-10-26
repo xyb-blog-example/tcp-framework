@@ -149,6 +149,7 @@ func(conn *Conn) recMsgHead(curReadSize uint64) (size uint64, err error) {
 			if readSize < 1 {
 				continue
 			}
+			break
 		}
 		//3.3 把读入的字节接到之前的buffer后面
 		conn.Buffer[index] = oneByteBuffer[0]
@@ -205,6 +206,7 @@ func(conn *Conn) recMsgBody(head []byte, buffer []byte, curReadSize uint64) (siz
 			if readSize < 1 {
 				continue
 			}
+			break
 		}
 		//3.3 把读入的字节接到之前的buffer后面
 		conn.Buffer[index] = oneByteBuffer[0]
